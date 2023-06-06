@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="scss/style.scss"> -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="blocknav">
+        <div class="container">
+            <nav>
+                <div class="navblock">
+                    <div class="navblock__logo"><img src="image/logo.png" alt=""></div>
+                    <div class="navblock__txt">Главная</div>
+                    <div class="navblock__txt">Номера</div>
+                    <div class="navblock__txt">Расположение</div>
+                    <div class="navblock__txt">Отзывы</div>
+                    <div class="navblock__txt">Контакты</div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main__txt">
+            <div class="txt1">Южный ветер</div>
+            <div class="txt2">мини-отель</div>
+        </div>
+    </div>
+    <!-- табы -->
+    <div class="container">
+        <div class="nomer">
+            <div class="nomer__i">Наши номера</div>
+            <div class="nomer__tab">
+                <div class="txt3 is-active" data-tab-name="tab-1">Люкс 1-комнатный</div>
+                <div class="txt3" data-tab-name="tab-2">Люкс 2-комнатный</div>
+                <div class="txt3" data-tab-name="tab-3">Апартаменты</div>
+            </div>
+            <div class="nomer__first is-active tab-1">
+                <div class="first__img"><img src="image/1-комнатный/photo_2023-03-05 16.28.38.jpeg" alt=""></div>
+                <div class="firsttext">
+                    <div class="tx1">Люкс</div>
+                    <div class="tx11">1-комнатный</div>
+                    <div class="info1">
+                        <div class="info1text">Спальных мест: 2 (возможно 2 доп места)
+                        <div class="info1text">Площадь:  27 кв.м. </div>
+                        <div class="info1text">Комнат в номере:  1</div>
+                        <div class="info1text">Санузел+Душ:  в номере</div>
+                        <div class="info1text">Мебель: двуспальная кровать, диван-кровать, шкаф, стулья, пуфики, прикроватные тумбочки, 
+                            туалетный столик, стол, прихожая, вешалка, зеркало</div>
+                        <div class="info1text">Удобства:  wi-fi, кондиционер, телевизор, спутниковое ТВ, сейф, холодильник, фен, эл. чайник, посуда, балкон.</div>
+                        </div>
+                        <div class="info1__money">Стоимость от 2500 руб</div>
+                        <button class="info1__button">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="nomer__first tab-2">
+                <div class="second__img"><img src="image/2-комнатный/Отель3.jpg" alt=""></div>
+                <div class="second__text">
+                    <div class="tx2">Люкс</div>
+                    <div class="tx22">2-комнатный</div>
+                    <div class="info2">
+                        <div class="info2text">Спальных мест:  5 (возможно доп место)
+                        <div class="info2text">Площадь номера:  42 кв.м.</div>
+                        <div class="info2text">Комнат в номере: 2 + кухня </div>
+                        <div class="info2text">Санузел+Душ:  в номере</div>
+                        <div class="info2text">Мебель: двуспальная кровать, диван-кровать, кресло-кровать, шкаф, стулья, пуфики, прикроватные тумбочки, туалетный столик, журнальный столик, стол, прихожая, вешалка, зеркало, кухонный гарнитур, обеденная зона</div>
+                        <div class="info2text">Удобства: кондиционер, телевизор, спутниковое ТВ, СВЧ, сейф, холодильник, фен, эл. чайник, посуда, балкон</div>
+                        </div>
+                        <div class="info2money">Стоимость от 3000 руб</div>
+                        <button class="info2button">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="nomer__first tab-3">
+                <div class="third__img"><img src="image/апарты/IMG_5885.JPG" alt=""></div>
+                <div class="third__text">
+                    <div class="tx3">Апартаменты</div>
+                    <div class="info3">
+                        <div class="info3text">Спальных мест:  5 (возможно доп место)
+                        <div class="info3text">Площадь номера:  38 кв.м.</div>
+                        <div class="info3text">Комнат в номере:  2 </div>
+                        <div class="info3text">Санузел+Душ:  в номере</div>
+                        <div class="info3text">Мебель: двуспальная кровать, диван-кровать, кресло-кровать, шкаф, стулья, пуфики, прикроватные тумбочки, туалетный столик, журнальный столик, стол, прихожая, вешалка, зеркало</div>
+                        <div class="info3text">Удобства: кондиционер, телевизор, спутниковое ТВ, сейф, холодильник, фен, эл. чайник, посуда</div>
+                        </div>
+                        <div class="info3money">Стоимость от 3500 руб</div>
+                        <button class="info3button">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- модальное окно -->
+    <div class="modal-open">
+        <button class="button" id="open-modal__btn">Дополнительные услуги</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <div class="blockmod">
+                <span class="modal__close">&times;</span>
+                <h2>Дополнительно</h2>
+                <div class="li">трансфер (платно)</div>
+                <div class="li">стиральная машина (платно)</div>
+                <div class="li">Wi-Fi интернет</div>
+                <div class="li">мангал</div>
+                <div class="li">беседка</div>
+                <div class="li">печь-казан</div>
+                <div class="li">гладильная + утюг</div>
+                <div class="li">детская площадка: качели, горка, 
+                скалодром, канатная стенка, батут</div>
+                <div class="li">спортивные развлечения</div>
+            </div>
+        </div>
+    </div>
+
+<!-- фильтр -->
+    <div class="filtr">
+        <div class="container">
+            <div class="text">
+                <div class="textp">Фотографии</div>
+                <div class="nomertxtf" id="nomertxtf">
+                    <div class="txtf is-active" data-tab-name="tab" id="all">Все</div>
+                    <div class="txtf" data-tab-name="tab-1" id="filtr1">Люкс 1-комнатный</div>
+                    <div class="txtf" data-tab-name="tab-2" id="filtr2">Люкс 2-комнатный</div>
+                    <div class="txtf" data-tab-name="tab-3" id="filtr3">Апартаменты</div>
+                </div>
+            </div>
+            <div class="filter__photo">
+                <div class="image first tab tab-1"><img src="image/1-комнатный/IMG_5902.JPG" alt=""></div>
+                <div class="image first tab tab-1"><img src="image/1-комнатный/IMG_5901.JPG" alt=""></div>
+                <div class="image first tab tab-1"><img src="image/1-комнатный/photo_2023-03-05 16.28.31.jpeg" alt=""></div>
+                <div class="image second tab tab-2"><img src="image/2-комнатный/IMG_5898.JPG" alt=""></div>
+                <div class="image second tab tab-2"><img src="image/2-комнатный/IMG_5899.JPG" alt=""></div>
+                <div class="image second tab tab-2"><img src="image/2-комнатный/Отель3.jpg" alt=""></div>
+                <div class="image third tab tab-3"><img src="image/апарты/IMG_5885.JPG" alt=""></div>
+                <div class="image third tab tab-3"><img src="image/апарты/IMG_5887.JPG" alt=""></div>
+                <div class="image third tab tab-3"><img src="image/апарты/IMG_5891.JPG" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+<!-- слайдер -->
+    <div class="container">
+        <div class="territoria">
+            <div class="textp">Территория</div>
+            <div class="slider">
+                <div class="slider-item"><img src="image/photo.jpeg" alt=""></div>
+                <div class="slider-item"><img src="image/IMG_6070.JPG" alt=""></div>
+                <div class="slider-item"><img src="image/photo_50.jpeg" alt="">
+                </div>
+                <div class="prev">&lt;</div>
+                <div class="next">&gt;</div>
+            </div>
+            .<div class="slider-dots">
+                <div class="dot dot-active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="container">
+            <div class="textp">Расположение</div>
+            <div class="map">
+                <div class="textmap">
+                    <div class="textmap1">Расстояние до:</div>
+                    <div class="li">пляж песчано-галечный - 3 минуты</div>
+                    <div class="li">набережная - 3 минуты</div>
+                    <div class="li">центр - 3 минуты</div>
+                    <div class="li">центр развлечений - 3 минуты</div>
+                    <div class="li">дельфинарий - 40 минут на авто</div>
+                    <div class="li">аквапарк - 15-20 минут на авто</div>
+                    <div class="li">рынок - 3 минуты</div>
+                    <div class="li">магазин продукты - 2 минуты</div>
+                    <div class="li">остановка транспорта - 3 минуты</div>
+                    <div class="li">аптека - 3 минуты</div>
+                    <div class="li">3 мин. до остановки общественного 
+                    транспорта</div>
+                    <div class="li">10 мин. до банкомата</div>
+                    <div class="li"></div>
+                    <div class="li"></div>
+                </div>
+                <div class="imgmap"><img src="image/IMG_1934 2.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+<!-- аккордеон -->
+    <div class="blockotz">
+        <div class="container">
+            <div class="textotz">Отзывы</div>
+            <div class="accordion__content hidden" id="acord-cont">
+                <div class="blockcom">
+                    <div class="textblockcom">
+                        <div class="textcom"> Очень здорово отдохнули! Были первый раз в Новофедоровке, место прекрасное! "Южный ветер" принял нас радушно, хозяева Елена и Павел очень рады гостям! Номера просторные, чистые, новые. Интерьер в спокойных бежевых тонах. Всё необходимое для спокойного и тихого проживания предоставляется. Рекомендуем отель, приедем к Вам обязательно! Семья из Екатеринбурга.</div>
+                        <div class="textcom">Светлана</div>
+                        <div class="textcom">★★★★★</div>
+                        <div class="textcom">3 августа 2022</div>
+                    </div>
+                    <div class="textblockcom">
+                        <div class="textcom"> Отдыхали этим летом именно в этом гостевом доме. Чистота идеальная, хозяева добродушные, веселые, отзывчивые. Подскажут если есть вопросы по быту. А так же предложат много интересных мест для посещения. Как в Новофедоровке, так и в Крыму в целом. Они очень любят сами путешествовать по Крыму и плохого не посоветуют!!! Спасибо Вам за наш чудесный отдых</div>
+                        <div class="textcom">Ирина</div>
+                        <div class="textcom">★★★★★</div>
+                        <div class="textcom">30 сентября 2022</div>
+                    </div>
+                    <div class="textblockcom">
+                        <div class="textcom"> Очень комфортный номер с балконом на котором можно приятно провести время, свежее здание и ремонт, удобные матрасы, накрахмаленное белье мангал, детская зона во дворе В общем все супер, однозначно советую</div>
+                        <div class="textcom">Дмитрий С.</div>
+                        <div class="textcom">★★★★★</div>
+                        <div class="textcom">24 августа 2022</div>
+                    </div>
+                    <div class="textblockcom">
+                        <div class="textcom"> Очень здорово отдохнули! Были первый раз в Новофедоровке, место прекрасное! "Южный ветер" принял нас радушно, хозяева Елена и Павел очень рады гостям! Номера просторные, чистые, новые. Интерьер в спокойных бежевых тонах. Всё необходимое для спокойного и тихого проживания предоставляется. Рекомендуем отель, приедем к Вам обязательно! Семья из Екатеринбурга.</div>
+                        <div class="textcom">Светлана</div>
+                        <div class="textcom">★★★★★</div>
+                        <div class="textcom">3 августа 2022</div>
+                    </div>
+                    <div class="textblockcom">
+                        <div class="textcom"> Отдыхали этим летом именно в этом гостевом доме. Чистота идеальная, хозяева добродушные, веселые, отзывчивые. Подскажут если есть вопросы по быту. А так же предложат много интересных мест для посещения. Как в Новофедоровке, так и в Крыму в целом. Они очень любят сами путешествовать по Крыму и плохого не посоветуют!!! Спасибо Вам за наш чудесный отдых</div>
+                        <div class="textcom">Ирина</div>
+                        <div class="textcom">★★★★★</div>
+                        <div class="textcom">30 сентября 2022</div>
+                    </div>
+                    <div class="textblockcom">
+                        <div class="textcom"> Очень комфортный номер с балконом на котором можно приятно провести время, свежее здание и ремонт, удобные матрасы, накрахмаленное белье мангал, детская зона во дворе В общем все супер, однозначно советую</div>
+                        <div class="textcom">Дмитрий С.</div>
+                        <div class="textcom">★★★★★</div>
+                        <div class="textcom">24 августа 2022</div>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion" id="accord">Посмотреть все</button>
+        </div>
+    </div>
+    
+    <div class="podval">
+        <div class="textpodvalp">Остались вопросы? Или готовы бронировать?</div>
+        <div class="textpodval">Позвони прямо сейчас</div>
+        <div class="textpodval">+7 915 529 29 19 </div>
+        <div class="textpodval">+7 903 886 40 94 </div>
+        <div class="textpodval">Крым, г.Саки, пгт. Новофёдоровка, ул. Цветочная 2</div>
+    </div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
