@@ -112,116 +112,7 @@ tab();
 	});
 
 	//фильтр
-// filterSelection("all");
-// var allButton = document.getElementById("all");
-// let	filtr1Button = document.getElementById("filtr1");
-// let	filtr2Button = document.getElementById("filtr2");
-// let	filtr3Button = document.getElementById("filtr3");
 
-// allButton.onclick = filterSelection("all");
-// filtr1Button.onclick = filterSelection("first");
-// filtr2Button.onclick = filterSelection("second");
-// filtr3Button.onclick = filterSelection("third");
-
-
-// function filterSelection(c) {
-// 	var x, i;
-//     x = document.getElementsByClassName("image");
-//     if (c == "all") {c = ""};
-//   // Добавить класс "show" (display:block) к отфильтрованным элементам и удалите класс "show" из элементов, которые не выбраны
-//     for (i = 0; i < x.length; i++) {
-// 		w3RemoveClass(x[i], "show");
-// 		if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-// 	}
-	
-// }
-
-
-// console.log('fdgdfg');
-
-
-// let listt = document.querySelectorAll(".nomertxtf .txtf");
-// console.log('fdgdfg');
-
-// allButton.addEventListener("click", function(){
-// 	if (listt[0].classList.lenght == 1) {
-// 		for (i == 0; i < 4; i++) {
-// 			if (listt[i].classList.lenght == 2) {
-// 				listt[i].classList.remove("active");
-// 			}
-// 		};
-// 		listt[0].classList.add("active");
-// 	}
-// })
-
-// filtr1Button.addEventListener("click", function(){
-// 	if (listt[1].classList.lenght == 1) {
-// 		for (i == 0; i < 4; i++) {
-// 			if (listt[i].classList.lenght == 2) {
-// 				listt[i].classList.remove("active");
-// 			}
-// 		};
-// 		listt[1].classList.add("active");
-// 	}
-// })
-
-// filtr2Button.addEventListener("click", function(){
-// 	if (listt[2].classList.lenght == 1) {
-// 		for (i == 0; i < 4; i++) {
-// 			if (listt[i].classList.lenght == 2) {
-// 				listt[i].classList.remove("active");
-// 			}
-// 		};
-// 		listt[2].classList.add("active");
-// 	}
-// })
-
-// filtr3Button.addEventListener("click", function(){
-// 	if (listt[3].classList.lenght == 1) {
-// 		for (i == 0; i < 4; i++) {
-// 			if (listt[i].classList.lenght == 2) {
-// 				listt[i].classList.remove("active");
-// 			}
-// 		};
-// 		listt[3].classList.add("active");
-// 	}
-// })
-
-
-// Показать отфильтрованные элементы
-// function w3AddClass(element, name) {
-// 	var i, arr1, arr2;
-// 	arr1 = element.className.split(" ");
-// 	arr2 = name.split(" ");
-// 	for (i = 0; i < arr2.length; i++) {
-// 		if (arr1.indexOf(arr2[i]) == -1) {
-// 			element.className += " " + arr2[i];
-// 		}	
-// 	}
-// }
-    
-// // Скрыть элементы, которые не выбраны
-// function w3RemoveClass(element, name) {
-// 	var i, arr1, arr2;
-// 	arr1 = element.className.split(" ");
-// 	arr2 = name.split(" ");
-// 	for (i = 0; i < arr2.length; i++) {
-// 		while (arr1.indexOf(arr2[i]) > -1) {
-// 			arr1.splice(arr1.indexOf(arr2[i]), 1);
-// 		}
-// 	}
-// 	element.className = arr1.join(" ");
-// }
-
-// var btnContainer = document.getElementById("nomertxtf");
-// var btns = document.getElementsByClassName("txtf");
-// for (var i = 0; i < btns.length; i++) {
-// 	btns[i].addEventListener("click", function() {
-// 		var current = document.getElementsByClassName("active");
-// 		current[0].className = current[0].className.replace(" active", "");
-// 		this.className += " active";
-// 	});
-// }
 
 let filtr = function () {
     let filtrNav = document.querySelectorAll('.txtf'),
@@ -262,7 +153,48 @@ accord.addEventListener("click", function () {
 	});
 
 
-//accordion();
+//бургер меню
+
+const hamb = document.querySelector("#hamb");
+const popup = document.querySelector("#popup");
+const body = document.body;
+
+// Клонируем меню, чтобы задать свои стили для мобильной версии
+const menu = document.querySelector("#menu").cloneNode(1);
+
+// При клике на иконку hamb вызываем ф-ию hambHandler
+hamb.addEventListener("click", hambHandler);
+
+// Выполняем действия при клике ..
+function hambHandler(e) {
+	e.preventDefault();
+  // Переключаем стили элементов при клике
+	popup.classList.toggle("open");
+	hamb.classList.toggle("active");
+	body.classList.toggle("noscroll");
+	renderPopup();
+}
+
+// Здесь мы рендерим элементы в наш попап
+function renderPopup() {
+	popup.appendChild(menu);
+}
+
+// Код для закрытия меню при нажатии на ссылку
+const links = Array.from(menu.children);
+
+// Для каждого элемента меню при клике вызываем ф-ию
+links.forEach((link) => {
+	link.addEventListener("click", closeOnClick);
+});
+
+// Закрытие попапа при клике на меню
+function closeOnClick() {
+	popup.classList.remove("open");
+	hamb.classList.remove("active");
+	body.classList.remove("noscroll");
+}
+
 
 });
 
